@@ -26,6 +26,18 @@ public partial class ContratacaoHospedagem : ContentPage
         dtpck_checkout.MaximumDate = dataCheckIn.AddMonths(6);
     }
 
+    private async void Button_Quartos(object sender, EventArgs e)
+    {
+        try
+        {
+            await Navigation.PushAsync(new Quartos());
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlertAsync("Ops", ex.Message, "OK");
+        }
+    }
+
     private async void Button_Sobre(object sender, EventArgs e)
     {
         try

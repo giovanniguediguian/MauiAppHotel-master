@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Quartos"
+             Title="Quartos"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F7F1E8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15"
+                             Spacing="15">
+
+            <Label Text="Nossas Acomodações"
+                   FontFamily="Kalam"
+                   FontSize="38"
+                   TextColor="#A64B32"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Conheça nossas opções e escolha a acomodação ideal para sua estadia."
+                   FontSize="14"
+                   TextColor="#806B5D"
+                   HorizontalTextAlignment="Center"/>
+
+            <CollectionView x:Name="listaQuartos"
+                            SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame Margin="5"
+                               Padding="15"
+                               BackgroundColor="#FFFDF9"
+                               BorderColor="#D8C8B7"
+                               CornerRadius="15">
+
+                            <VerticalStackLayout Spacing="8">
+
+                                <Label Text="{Binding Descricao}"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       TextColor="#A64B32"/>
+
+                                <BoxView HeightRequest="1"
+                                         BackgroundColor="#D8C8B7"/>
+
+                                <Label Text="Diária por adulto"
+                                       FontAttributes="Bold"
+                                       TextColor="#493329"/>
+
+                                <Label Text="{Binding ValorDiariaAdulto, StringFormat='{}{0:C}'}"
+                                       TextColor="#806B5D"/>
+
+                                <Label Text="Diária por criança"
+                                       FontAttributes="Bold"
+                                       TextColor="#493329"/>
+
+                                <Label Text="{Binding ValorDiariaCrianca, StringFormat='{}{0:C}'}"
+                                       TextColor="#806B5D"/>
+
+                            </VerticalStackLayout>
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Button Text="Voltar"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#A64B32"
+                    TextColor="#FFFFFF"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    HeightRequest="50"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

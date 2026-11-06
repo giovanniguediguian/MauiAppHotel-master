@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MauiAppHotel.Views.Sobre"
     Title="Sobre"
+	NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F7F1E8">
 
     <ScrollView>
@@ -16,7 +17,7 @@
             <Label
                 Text="HOTEL GUEDIGUIAN"
                 FontSize="30"
-                FontAttributes="Bold"
+                FontFamily="Kalam"
                 TextColor="#A64B32"
                 HorizontalTextAlignment="Center" />
 

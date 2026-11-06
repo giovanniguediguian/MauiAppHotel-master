@@ -141,6 +141,14 @@
                         FontAttributes="Bold"
                         HeightRequest="50"/>
 
+				<Button Text="Detalhes Quartos"
+		                Clicked="Button_Quartos"
+		                BackgroundColor="#C58B45"
+		                TextColor="#FFFFFF"
+		                CornerRadius="10"
+		                FontAttributes="Bold"
+		                HeightRequest="45"/>
+
 			</VerticalStackLayout>
 		</Frame>
 
