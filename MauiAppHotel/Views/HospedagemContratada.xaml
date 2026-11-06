@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#F7F1E8">
+
+	<VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10"
+                         Spacing="12">
+
+		<Label Text="{Binding QuartoSelecionado.Descricao}"
+               TextColor="#A64B32"
+               FontFamily="Kalam"
+               FontSize="50"
+               HorizontalTextAlignment="Center"/>
+
+		<Frame Margin="5"
+               Padding="15"
+               BackgroundColor="#FFFDF9"
+               BorderColor="#D8C8B7"
+               CornerRadius="15">
+
+			<StackLayout Orientation="Horizontal">
+
+				<HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                                       Spacing="5">
+					<Label Text="Adultos:"
+                           TextColor="#493329"/>
+
+					<Label Text="{Binding QntAdultos}"
+                           TextColor="#A64B32"
+                           FontAttributes="Bold"/>
+				</HorizontalStackLayout>
+
+				<HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                                       Spacing="5">
+					<Label Text="Crianças:"
+                           TextColor="#493329"/>
+
+					<Label Text="{Binding QntCriancas}"
+                           TextColor="#A64B32"
+                           FontAttributes="Bold"/>
+				</HorizontalStackLayout>
+
+			</StackLayout>
+		</Frame>
+
+		<Frame Margin="5"
+               Padding="15"
+               BackgroundColor="#FFFDF9"
+               BorderColor="#D8C8B7"
+               CornerRadius="15">
+
+			<Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto"
+                  RowSpacing="10">
+
+				<Label Grid.Row="0" Grid.Column="0"
+                       Text="Check-in:"
+                       TextColor="#493329"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Grid.Row="0" Grid.Column="1"
+                       Text="Check-out:"
+                       TextColor="#493329"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Grid.Row="0" Grid.Column="2"
+                       Text="Estadia:"
+                       TextColor="#493329"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Grid.Row="1" Grid.Column="0"
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       TextColor="#A64B32"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Grid.Row="1" Grid.Column="1"
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       TextColor="#A64B32"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Grid.Row="1" Grid.Column="2"
+                       Text="{Binding Estadia}"
+                       TextColor="#A64B32"
+                       HorizontalTextAlignment="Center"/>
+
+			</Grid>
+		</Frame>
+
+		<Frame Margin="5"
+               Padding="20"
+               BackgroundColor="#F0E3D2"
+               BorderColor="#C58B45"
+               CornerRadius="15">
+
+			<VerticalStackLayout Spacing="5">
+
+				<Label Text="VALOR TOTAL"
+                       TextColor="#806B5D"
+                       FontAttributes="Bold"
+                       FontSize="Small"
+                       HorizontalTextAlignment="Center"/>
+
+				<Label Text="{Binding ValorTotal, StringFormat='{}{0:C}'}"
+                       TextColor="#A64B32"
+                       FontAttributes="Bold"
+                       FontSize="32"
+                       HorizontalTextAlignment="Center"/>
+
+			</VerticalStackLayout>
+		</Frame>
+
+		<Button Text="Voltar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"
+                BackgroundColor="#A64B32"
+                TextColor="#FFFFFF"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                WidthRequest="180"
+                HeightRequest="50"/>
+
+	</VerticalStackLayout>
+</ContentPage>

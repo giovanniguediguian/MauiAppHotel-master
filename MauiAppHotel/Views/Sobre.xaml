@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppHotel.Views.Sobre"
+    Title="Sobre"
+    BackgroundColor="#F7F1E8">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <!-- Identificação do hotel -->
+            <Label
+                Text="HOTEL GUEDIGUIAN"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#A64B32"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Sistema de gerenciamento de hospedagens"
+                FontSize="15"
+                TextColor="#806B5D"
+                HorizontalTextAlignment="Center" />
+
+            <BoxView
+                HeightRequest="2"
+                Color="#C58B45"
+                Margin="20,5" />
+
+            <!-- Sobre o aplicativo -->
+            <Label
+                Text="Sobre o aplicativo"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="#493329" />
+
+            <Label
+                Text="O aplicativo Hotel Guediguian foi desenvolvido com o objetivo de facilitar o processo de contratação e gerenciamento de hospedagens. Por meio de uma interface simples e intuitiva, permite consultar opções de quartos, selecionar períodos de estadia, informar a quantidade de hóspedes e visualizar os dados da contratação."
+                FontSize="15"
+                TextColor="#665448"
+                LineHeight="1.4" />
+
+            <!-- Desenvolvedor -->
+            <Label
+                Text="Desenvolvimento"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="#493329"
+                Margin="0,10,0,0" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label
+                    Text="Desenvolvedor"
+                    FontSize="13"
+                    TextColor="#967F70" />
+
+                <Label
+                    Text="Giovanni de Moura Guediguian"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    TextColor="#493329" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label
+                    Text="Ano de desenvolvimento"
+                    FontSize="13"
+                    TextColor="#967F70" />
+
+                <Label
+                    Text="2026"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    TextColor="#493329" />
+            </VerticalStackLayout>
+
+            <BoxView
+                HeightRequest="1"
+                Color="#D8C8B7"
+                Margin="0,10" />
+
+            <Label
+                Text="Hotel Guediguian © 2026"
+                FontSize="12"
+                TextColor="#967F70"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Botão para voltar à página principal -->
+            <Button
+                x:Name="btnVoltar"
+                Text="Voltar à página principal"
+                BackgroundColor="#A64B32"
+                TextColor="#FFFFFF"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="btnVoltar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
